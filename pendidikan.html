@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Pendidikan</title>
+  <style type="text/css">
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      color: #444;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #FFDDEE;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #704C5E;
+      font-weight: bold;
+      font-size: 16px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a i {
+        margin-right: 6px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #D46A92;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #D46A92;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    h2 {
+      font-family: 'Pacifico', cursive;
+      color: #D46A92;
+      font-size: 32px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .table-wrapper {
+      padding: 0 5vw;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #FFF8FB;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      font-size: 16px;
+    }
+
+    th, td {
+      padding: 15px;
+      border-bottom: 1px solid #FFDDEE;
+      text-align: center;
+    }
+
+    th {
+      background: linear-gradient(to right, #FFB6C1, #FFDDEE);
+      color: #704C5E;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #FFF0F5;
+    }
+
+    img {
+      width: 60px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html"><i class="fas fa-home"></i>HOME</a>
+    <a href="about.html"><i class="fas fa-user"></i>ABOUT ME</a>
+    <a href="pendidikan.html"><i class="fas fa-graduation-cap"></i>EDUCATION</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i>CONTACT</a>
+  </nav>
+
+  <h2>Educational Background</h2>
+
+  <div class="table-wrapper">
+    <table>
+      <tr>
+        <th>No.</th>
+        <th>Logo</th>
+        <th>Nama Sekolah/Institusi</th>
+        <th>Tahun Pendidikan</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><img src="sd.png" alt="logo1"></td>
+        <td>SD N Kajen 1</td>
+        <td>2012-2018</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><img src="Talang.png" alt="logo2"></td>
+        <td>SMP N 1 Talang</td>
+        <td>2018-2021</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><img src="Islamiyah.png" alt="logo3"></td>
+        <td>SMK Islamiyah Adiwerna</td>
+        <td>2021-2024</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><img src="UTD.png" alt="logo4"></td>
+        <td>Universitas Teknologi Digital</td>
+        <td>2024-2027</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

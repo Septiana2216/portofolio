@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      color: #444;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #FFDDEE;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #704C5E;
+      font-weight: bold;
+      font-size: 16px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a i {
+        margin-right: 6px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #D46A92;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #D46A92;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 40px;
+      color: #D46A92;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .content {
+      background-color: #FFF8FB;
+      margin: 30px auto;
+      padding: 40px;
+      width: 75%;
+      border-radius: 20px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: justify;
+      color: #555;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: #FFDDEE;
+      width: 60%;
+      margin: 20px auto;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Optional cute touch */
+    .emoji {
+      font-size: 22px;
+      margin: 10px 0;
+      animation: pop 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i>HOME</a>
+        <a href="about.html"><i class="fas fa-user"></i>ABOUT ME</a>
+        <a href="pendidikan.html"><i class="fas fa-graduation-cap"></i>EDUCATION</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i>CONTACT</a>
+      </nav>
+
+  <h1>About Me</h1>
+  <hr>
+
+  <div class="content">
+    <div class="emoji">૮₍ ´• ˕ •` ₎ა</div>
+    <p>Hi there! My name is Septiana, but you can call me Tia. I'm a university student who is passionate about 
+    communication, design, and digital creativity. I enjoy expressing myself through technology, and I love learning 
+    new things—especially anything related to digital media and web development.</p>
+
+    <p>When I'm not studying or coding, you'll probably find me sketching, editing designs, or listening to music while 
+    planning my next creative project. I believe that creativity and kindness go hand-in-hand, and I always try to 
+    bring both into everything I do.</p>
+    <div class="emoji">✿◕ ‿ ◕✿</div>
+  </div>
+</body>
+</html>
