@@ -2,29 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <title>Septiana's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    
+    /*mengubah wallpaper font dan posisi*/
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: 
-      linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 240, 245, 0.7)),
-      url(wp-onepiece.jpg) 
-      no-repeat center center fixed;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('one piece.jpg');
       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      min-height: 100vh;
       color: #444;
       text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Transparansi backgorund */
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 240, 245, 0.75); /* Transparansi pastel pink */
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /*agar tetap tampil di atas background transparan overlay*/
+    nav, h1, .content, hr {
+      position: relative;
+      z-index: 1;
     }
 
     nav {
-      background-color: #FFDDEE;
+      background-color: rgba(255, 221, 238, 0.9);
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
 
     nav a {
@@ -37,54 +56,72 @@
       transition: all 0.3s ease;
     }
 
+    /*untuk merubah icon*/
     nav a i {
-        margin-right: 6px;
+      margin-right: 6px;
     }
 
+    /*untuk merubah kursor*/
     nav a::after {
       content: '';
       position: absolute;
       width: 0;
       height: 2px;
-      bottom: -5px;
       left: 0;
+      bottom: -5px;
       background-color: #D46A92;
-      transition: width 0.3s ease;
+      transition: 0.3s ease;
     }
 
     nav a:hover {
       color: #D46A92;
+      transform: translateY(-2px);
     }
 
     nav a:hover::after {
       width: 100%;
     }
 
+    /*untuk mengedit septiana istijabah*/
     h1 {
       font-family: 'Pacifico', cursive;
-      font-size: 40px;
-      color: #D46A92;
-      margin-top: 40px;
-      animation: fadeIn 1.5s ease;
+      font-size: 30px;
+      background: linear-gradient(90deg, #000000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 30px;
+      letter-spacing: 2px;
     }
 
+    /*untuk mengedit profil*/
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 25px 0;
+      border: 4px solid #FFDDEE;
+      object-fit: cover;
+      box-shadow: 0 0 10px #f9a;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /*untuk merubah isi pada content*/
     .content {
-      background-color: #FFF8FB;
+      background-color: rgba(255, 248, 251, 0.9);
       margin: 30px auto;
-      padding: 40px;
-      width: 75%;
-      border-radius: 20px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
-      animation: fadeInUp 1s ease;
+      padding: 30px;
+      width: 70%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
+    /*untuk merubah font content*/
     p {
       font-size: 18px;
       line-height: 1.8;
-      text-align: justify;
-      color: #555;
     }
 
+    /*unyuk mengedit layar di tampilan*/
     hr {
       border: none;
       height: 2px;
@@ -93,29 +130,16 @@
       margin: 20px auto;
     }
 
+    /*untuk mengedit efek profile*/
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .emoji {
-      font-size: 22px;
-      margin: 10px 0;
-      animation: pop 1s ease-in-out infinite alternate;
-    }
-
-    @keyframes pop {
-      from { transform: scale(1); }
-      to { transform: scale(1.1); }
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
+  <div class="background-overlay"></div>
+
   <nav>
     <a href="index.html"><i class="fas fa-home"></i>HOME</a>
     <a href="about.html"><i class="fas fa-user"></i>ABOUT ME</a>
@@ -123,19 +147,12 @@
     <a href="contact.html"><i class="fas fa-envelope"></i>CONTACT</a>
   </nav>
 
-  <h1>About Me</h1>
+  <h1>SEPTIANA ISTIJABAH</h1>
   <div class="content">
-    <div class="emoji">૮₍ ´• ˕ •` ₎ა</div>
-    <p>Hi! I’m Septiana, but you can call me Tia. I’m a cheerful student with big dreams and a 
-      soft spot for laying in bed while endlessly scrolling through TikTok. That’s my kind of healing, don’t judge!</p>
-    <p>Food is my love language. I’m obsessed with spicy crispy chicken (especially with melted cheese), chocolate, 
-      ice cream, and of course—Cimory milk, all flavors welcome. If my fridge is full of those, life is good.</p>
-    <p>Honestly, I’m smart. I just get lazy sometimes… okay, maybe most of the time. But whenever I feel helpless or totally clueless,
-      my boyfriend is my go-to hero. I just call him, and boom—problem solved. He’s my real-life cheat code.</p>
-    <p>I’m not a super serious person, but I know what I want. Life’s too short to be gloomy, so I live it with pastel colors, 
-      happy vibes, and lots of silly moments. This website? Just a cute little version of me—sweet, quirky,
-       and full of personality.</p>
-    <div class="emoji">✿◕ ‿ ◕✿</div>
+    <img src="home.jpg" alt="My Photo">
+    <p>Bonjour !!! Je m'appelle Septiana, je suis étudiante à l'Université de Technologie Digitale. 
+    Je suis une jeune femme charmante, élégante, gentille et sans prétention („• ֊ •„)੭.  
+    Ce site est mon site personnel, bienvenue à la découverte de ma personnalité ! Merci de votre visite ૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
   </div>
 </body>
 </html>
