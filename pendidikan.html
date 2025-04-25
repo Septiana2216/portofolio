@@ -6,16 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <title>Pendidikan</title>
   <style type="text/css">
+
+    /*mengubah wallpaper font dan posisi*/
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      background: 
+      linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 240, 245, 0.7)),
+      url(wp-pendidikan.jpg) no-repeat center center fixed;
+      background-size: cover;
       color: #444;
       text-align: center;
     }
 
+     /*untuk mwengubah border di atas,font, logo*/
     nav {
       background-color: #FFDDEE;
       padding: 20px;
@@ -28,6 +33,7 @@
       justify-content: center;
     }
 
+    /*untuk mengedit tampilan pada navigasi*/
     nav a {
       margin: 0 20px;
       text-decoration: none;
@@ -38,10 +44,12 @@
       transition: all 0.3s ease;
     }
 
+    /*untuk mengedit jarak ikon*/
     nav a i {
       margin-right: 6px;
     }
 
+    /*untuk mengedit animasi kursor*/
     nav a::after {
       content: '';
       position: absolute;
@@ -53,40 +61,47 @@
       transition: width 0.3s ease;
     }
 
+    /*untuk mengedit warna navbar*/
     nav a:hover {
       color: #D46A92;
     }
 
+    /*untuk mengedit kursor*/
     nav a:hover::after {
       width: 100%;
     }
 
+    /*untuk mengedit font , warna, animasi*/
     h2 {
       font-family: 'Pacifico', cursive;
-      color: #D46A92;
+      color: #000000;
       font-size: 32px;
       margin-top: 40px;
       animation: fadeIn 1.5s ease;
     }
 
+    /*untuk mengedit table di belakang*/
     .table-wrapper {
-      padding: 0 5vw;
-      margin-top: 20px;
+      background-color: #FFB6C1;
+      padding: 30px;
+      margin: 30px auto;
+      width: 85%;
       max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-      overflow-x: auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
     }
 
+    /*untuk mengedit table*/
     table {
       width: 100%;
       border-collapse: collapse;
       background-color: #FFF8FB;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       font-size: 16px;
       min-width: 500px;
     }
 
+    /*untuk mengedit table*/
     th, td {
       padding: 15px;
       border-bottom: 1px solid #FFDDEE;
@@ -100,9 +115,10 @@
     }
 
     tr:nth-child(even) {
-      background-color: #FFF0F5;
+      background-color: #f0fff2;
     }
 
+    /*untuk merubah ukuran img*/
     img {
       width: 60px;
       height: 40px;
@@ -111,8 +127,14 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
+    /*untuk mengedit animasi*/
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
