@@ -2,153 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me</title>
+  <title>Contact Me - Septiana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
 
-    /*mengubah wallpaper font dan posisi*/
+    /*mengubah wallpaper, font, dan posisi*/
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       background: 
-      linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 240, 245, 0.7)),
-      url(wp-onepiece.jpg) 
-      no-repeat center center fixed;
+      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 240, 245, 0.3)),
+      url(zoro.jpg) no-repeat center center fixed;
       background-size: cover;
       color: #444;
       text-align: center;
     }
 
-    /*untuk mwengubah border di atas*/
-    nav {
-      background-color: #FFDDEE;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      position: sticky;
+    /*membuat lapisan transparan di atas gambar adar konten terlihat lebih jelas*/
+    .overlay {
+      position: fixed;
       top: 0;
-      z-index: 100;
-    }
-
-    /*untuk merubah font dan kursor*/
-    nav a {
-      margin: 0 20px;
-      text-decoration: none;
-      color: #704C5E;
-      font-weight: bold;
-      font-size: 16px;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    /*untuk mengedit jarak ikon*/
-    nav a i {
-        margin-right: 6px;
-    }
-
-    /*untuk mengedit animasi kursor*/
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -5px;
       left: 0;
-      background-color: #D46A92;
-      transition: width 0.3s ease;
-    }
-
-    /*untuk mengedit warna navbar*/
-    nav a:hover {
-      color: #D46A92;
-    }
-
-    /*untuk mengedit kursor*/
-    nav a:hover::after {
       width: 100%;
+      height: 100%;
+      background-color: rgba(255, 245, 250, 0.7);
+      z-index: 0;
     }
 
-    /*untuk mengedit font , warna, animasi*/
-    h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 40px;
-      color: #000000;
-      margin-top: 40px;
-      animation: fadeIn 1.5s ease;
-    }
-
-    /*untuk mengedit back color, animasi, posisi*/
-    .content {
-      background-color: #FFF8FB;
-      margin: 30px auto;
+    /*untuk mengubah wadah utama untuk form atau konten, dengan efek bayangan, padding, dan sudut melengkung*/
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 80px auto;
+      background: #fff0f5;
       padding: 40px;
-      width: 75%;
-      border-radius: 20px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
-      animation: fadeInUp 1s ease;
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    /*untuk mengedit isi paragraft*/
-    p {
-      font-size: 18px;
-      line-height: 1.8;
-      text-align: justify;
-      color: #555;
+    /*menampilkan foto profile berbentuk bulat*/
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffb6c1;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px #f9a;
+      padding: 5px;
     }
 
-    /*untuk mengedit garis pemisa horizontal <hr>*/
-    hr {
+    /*untuk mengedit judl utama form, warna dan margin bawah*/
+    h1 {
+      font-size: 30px;
+      color: #d96da5;
+      margin-bottom: 20px;
+    }
+
+    /*untuk mengedit form input*/
+    label {
+      display: block;
+      text-align: left;
+      margin: 12px 0 5px;
+      color: #804e6c;
+      font-weight: bold;
+    }
+
+    /*untuk mengedit mengatur tampilan kotak isian (form)*/
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px dashed #ffcce5;
+      border-radius: 12px;
+      background-color: #fffaff;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    /*untuk mengedit tombol kirim form*/
+    button {
+      margin-top: 20px;
+      background-color: #ff99cc;
+      color: white;
+      padding: 12px 25px;
       border: none;
-      height: 2px;
-      background: #FFDDEE;
-      width: 60%;
-      margin: 20px auto;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
 
-    /*untuk mengedit animasi*/
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    button:hover {
+      background-color: #ff66a3;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .social-links {
+      margin-top: 30px;
+      font-size: 24px;
     }
 
-    .emoji {
-      font-size: 22px;
-      margin: 10px 0;
-      animation: pop 1s ease-in-out infinite alternate;
+    /*untuk mengedit ikon media sosial yang bisa diklik*/
+    .social-links a {
+      color: #d96da5;
+      margin: 0 10px;
+      transition: 0.3s;
     }
 
-    @keyframes pop {
-      from { transform: scale(1); }
-      to { transform: scale(1.1); }
+    .social-links a:hover {
+      color: #ff66a3;
+    }
+
+    /*untuk mengedti tampilan responsif di layar kecil(hp)*/
+    @media (max-width: 768px) {
+      .container {
+        margin: 40px 20px;
+        padding: 30px 20px;
+      }
+      
+      h1b{
+        font-size: 24px;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
+      .social-links {
+        font-size: 20;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html"><i class="fas fa-home"></i>HOME</a>
-    <a href="about.html"><i class="fas fa-user"></i>ABOUT ME</a>
-    <a href="pendidikan.html"><i class="fas fa-graduation-cap"></i>EDUCATION</a>
-    <a href="contact.html"><i class="fas fa-envelope"></i>CONTACT</a>
-  </nav>
+  <div class="overlay"></div>
 
-  <h1>About Me</h1>
-  <div class="content">
-    <div class="emoji">૮₍ ´• ˕ •` ₎ა</div>
-    <p>Hi! I’m Septiana, but you can call me Tia. I’m a cheerful student with big dreams and a 
-      soft spot for laying in bed while endlessly scrolling through TikTok. That’s my kind of healing, don’t judge!</p>
-    <p>Food is my love language. I’m obsessed with spicy crispy chicken (especially with melted cheese), chocolate, 
-      ice cream, and of course—Cimory milk, all flavors welcome. If my fridge is full of those, life is good.</p>
-    <p>Honestly, I’m smart. I just get lazy sometimes… okay, maybe most of the time. But whenever I feel helpless or totally clueless,
-      my boyfriend is my go-to hero. I just call him, and boom—problem solved. He’s my real-life cheat code.</p>
-    <p>I’m not a super serious person, but I know what I want. Life’s too short to be gloomy, so I live it with pastel colors, 
-      happy vibes, and lots of silly moments. This website? Just a cute little version of me—sweet, quirky,
-       and full of personality.</p>
-    <div class="emoji">✿◕ ‿ ◕✿</div>
+  <div class="container">
+    <img src="ME.jpg" alt="My Cute Photo" class="profile-pic">
+    
+    <h1>Let's Be Friends!</h1>
+    <form action="https://formsubmit.co/yrzsptiana@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="thanks.html"
+      value="https://yourwebsite.com/thanks.html">
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Type your name..." required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Type your email..." required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Say something nice..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-links">
+      <a href="https://wa.me/6285647778106" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/septiana.ij" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/septiana.istijabah.1" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
   </div>
 </body>
 </html>
