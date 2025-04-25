@@ -6,14 +6,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+
+    /*mengubah wallpaper font dan posisi*/
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      background: 
+      linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 240, 245, 0.7)),
+      url(wp-onepiece.jpg) 
+      no-repeat center center fixed;
+      background-size: cover;
       color: #444;
       text-align: center;
     }
 
+    /*untuk mwengubah border di atas*/
     nav {
       background-color: #FFDDEE;
       padding: 20px;
@@ -23,6 +30,7 @@
       z-index: 100;
     }
 
+    /*untuk merubah font dan kursor*/
     nav a {
       margin: 0 20px;
       text-decoration: none;
@@ -33,10 +41,12 @@
       transition: all 0.3s ease;
     }
 
+    /*untuk mengedit jarak ikon*/
     nav a i {
         margin-right: 6px;
     }
 
+    /*untuk mengedit animasi kursor*/
     nav a::after {
       content: '';
       position: absolute;
@@ -48,22 +58,26 @@
       transition: width 0.3s ease;
     }
 
+    /*untuk mengedit warna navbar*/
     nav a:hover {
       color: #D46A92;
     }
 
+    /*untuk mengedit kursor*/
     nav a:hover::after {
       width: 100%;
     }
 
+    /*untuk mengedit font , warna, animasi*/
     h1 {
       font-family: 'Pacifico', cursive;
       font-size: 40px;
-      color: #D46A92;
+      color: #000000;
       margin-top: 40px;
       animation: fadeIn 1.5s ease;
     }
 
+    /*untuk mengedit back color, animasi, posisi*/
     .content {
       background-color: #FFF8FB;
       margin: 30px auto;
@@ -74,6 +88,7 @@
       animation: fadeInUp 1s ease;
     }
 
+    /*untuk mengedit isi paragraft*/
     p {
       font-size: 18px;
       line-height: 1.8;
@@ -89,6 +104,7 @@
       margin: 20px auto;
     }
 
+    /*untuk mengedit animasi*/
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -99,7 +115,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Optional cute touch */
     .emoji {
       font-size: 22px;
       margin: 10px 0;
@@ -113,25 +128,25 @@
   </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html"><i class="fas fa-home"></i>HOME</a>
-        <a href="about.html"><i class="fas fa-user"></i>ABOUT ME</a>
-        <a href="pendidikan.html"><i class="fas fa-graduation-cap"></i>EDUCATION</a>
-        <a href="contact.html"><i class="fas fa-envelope"></i>CONTACT</a>
-      </nav>
+  <nav>
+    <a href="index.html"><i class="fas fa-home"></i>HOME</a>
+    <a href="about.html"><i class="fas fa-user"></i>ABOUT ME</a>
+    <a href="pendidikan.html"><i class="fas fa-graduation-cap"></i>EDUCATION</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i>CONTACT</a>
+  </nav>
 
   <h1>About Me</h1>
-  <hr>
-
   <div class="content">
     <div class="emoji">૮₍ ´• ˕ •` ₎ა</div>
-    <p>Hi there! My name is Septiana, but you can call me Tia. I'm a university student who is passionate about 
-    communication, design, and digital creativity. I enjoy expressing myself through technology, and I love learning 
-    new things—especially anything related to digital media and web development.</p>
-
-    <p>When I'm not studying or coding, you'll probably find me sketching, editing designs, or listening to music while 
-    planning my next creative project. I believe that creativity and kindness go hand-in-hand, and I always try to 
-    bring both into everything I do.</p>
+    <p>Hi! I’m Septiana, but you can call me Tia. I’m a cheerful student with big dreams and a 
+      soft spot for laying in bed while endlessly scrolling through TikTok. That’s my kind of healing, don’t judge!</p>
+    <p>Food is my love language. I’m obsessed with spicy crispy chicken (especially with melted cheese), chocolate, 
+      ice cream, and of course—Cimory milk, all flavors welcome. If my fridge is full of those, life is good.</p>
+    <p>Honestly, I’m smart. I just get lazy sometimes… okay, maybe most of the time. But whenever I feel helpless or totally clueless,
+      my boyfriend is my go-to hero. I just call him, and boom—problem solved. He’s my real-life cheat code.</p>
+    <p>I’m not a super serious person, but I know what I want. Life’s too short to be gloomy, so I live it with pastel colors, 
+      happy vibes, and lots of silly moments. This website? Just a cute little version of me—sweet, quirky,
+       and full of personality.</p>
     <div class="emoji">✿◕ ‿ ◕✿</div>
   </div>
 </body>
